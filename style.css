@@ -1,4 +1,23 @@
+.chrome-logo {
+  width: 180px;
+  height: auto;
+  position: relative;
+  z-index: 10;
+  animation: chromeShine 4s infinite;
+  transition: transform 0.3s ease;
+}
 
+@keyframes chromeShine {
+  0% {
+    filter: brightness(1) contrast(1);
+  }
+  50% {
+    filter: brightness(1.8) contrast(1.2) drop-shadow(0 0 10px #999);
+  }
+  100% {
+    filter: brightness(1) contrast(1);
+  }
+}
 body {
   margin: 0;
   background: #0a0a0a;

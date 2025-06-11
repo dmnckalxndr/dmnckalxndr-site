@@ -1,33 +1,126 @@
-<script>
-window.addEventListener('scroll', function () {
-  const logo = document.querySelector('.chrome-logo');
-  const scrollTop = window.scrollY;
-  const scale = Math.max(1 - scrollTop / 1000, 0.8);
-  logo.style.transform = `scale(${scale})`;
-});
-</script><header>
-  <img src="logo.png" alt="DMNCKALXNDR Logo" 
-</header><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home Page - DMNCKALXNDR</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>DMNCKALXNDR</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #0a0a0a;
+      color: white;
+      scroll-behavior: smooth;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      padding: 20px;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .chrome-logo {
+      height: 50px;
+      animation: chromeShine 4s infinite;
+    }
+    @keyframes chromeShine {
+      0%, 100% {
+        filter: brightness(1) contrast(1);
+      }
+      50% {
+        filter: brightness(1.8) contrast(1.4) drop-shadow(0 0 10px #aaa);
+      }
+    }
+    section {
+      height: 100vh;
+      padding: 80px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .parallax {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .hero {
+      background-image: url('https://source.unsplash.com/1600x900/?fashion,portrait');
+    }
+    .portfolio {
+      background-image: url('https://source.unsplash.com/1600x900/?photography,editorial');
+    }
+    .book {
+      background-image: url('https://source.unsplash.com/1600x900/?camera,urban');
+    }
+    .testimonials {
+      background-image: url('https://source.unsplash.com/1600x900/?studio,photo');
+    }
+    .about {
+      background-image: url('https://source.unsplash.com/1600x900/?city,night');
+    }
+    h1 {
+      font-size: 48px;
+      text-shadow: 0 0 10px black;
+    }
+    p {
+      max-width: 600px;
+      font-size: 18px;
+      opacity: 0.8;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <a href="index.html"><img src="logo.png" class="logo" alt="Logo" /></a>
-    <nav>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="booking.html">Book a Shoot</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="about.html">About</a>
-    </nav>
-  </header>
-  <main>
-    <h1>Home Page - DMNCKALXNDR</h1>
-    <p>Page content coming soon...</p>
-  </main>
+
+<header>
+  <img src="logo.png" alt="DMNCKALXNDR Logo" class="chrome-logo" />
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#book">Book a Shoot</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<section class="hero parallax" id="hero">
+  <h1>DMNCKALXNDR</h1>
+  <p>New York City Photographer • Events • Artists • Fashion • Culture</p>
+</section>
+
+<section class="portfolio parallax" id="portfolio">
+  <h1>Portfolio</h1>
+  <p>Preview our aesthetic. Real shots. Real emotion. Coming soon.</p>
+</section>
+
+<section class="book parallax" id="book">
+  <h1>Book a Shoot</h1>
+  <p>Form coming soon. DM or email to schedule in the meantime.</p>
+</section>
+
+<section class="testimonials parallax" id="testimonials">
+  <h1>Client Feedback</h1>
+  <p>“Dom made me feel powerful in every frame.” — Ciara, NYC</p>
+</section>
+
+<section class="about parallax" id="about">
+  <h1>About Dom</h1>
+  <p>DMNCKALXNDR is a Bronx-based creative capturing the raw beauty of the city and its people.</p>
+</section>
+
 </body>
 </html>

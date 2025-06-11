@@ -1,2 +1,0 @@
-# dmnckalxndr-site
-photography page
